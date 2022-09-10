@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TasksModule } from './tasks/tasks.module';
-import { AuthModule } from './auth/auth.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { configValidationSchema } from './config.schema';
 
@@ -39,7 +38,6 @@ import { configValidationSchema } from './config.schema';
         }
       }
     }),
-    AuthModule,
   ],
 })
 export class AppModule {}
